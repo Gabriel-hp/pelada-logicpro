@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelada da LogicPro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pelada da LogicPro ⚽</h1>
+    
+    <nav>
+        <button onclick="mostrarTela('confirmacao')">Confirmar Presença</button>
+        <button onclick="mostrarTela('sortearTimes')">Sortear Times</button>
+        <button onclick="mostrarTela('classificacao')">Classificação</button>
+        <button onclick="mostrarTela('timesConfirmados')">Times e Vitórias</button>
+    </nav>
+    
+    <section id="confirmacao" class="tela">
+        <h2>Confirme sua Presença</h2>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <button id="btnConfirmar">Confirmar</button>
+        <ul id="lista-presenca"></ul>
+    </section>
+    
+    <section id="sortearTimes" class="tela" style="display:none;">
+        <h2>Sortear Times</h2>
+        <button id="btnSortear">Sortear</button>
+        <div id="times"></div>
+    </section>
+    
+    <section id="classificacao" class="tela" style="display:none;">
+        <h2>Classificação</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Jogador</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-classificacao"></tbody>
+        </table>
+    </section>
+    
+    <section id="timesConfirmados" class="tela" style="display:none;">
+        <h2>Times Confirmados e Vitórias</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Vitórias</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-times"></tbody>
+        </table>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
